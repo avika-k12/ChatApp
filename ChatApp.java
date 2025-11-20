@@ -86,6 +86,7 @@ public class ChatApp {
                     String username = scanner.nextLine();
                     User userToAdd = new User(username);
                     addUser(userToAdd);
+                    break;
                 case "2":
                     System.out.println("Enter your sender: ");
                     String sender = scanner.nextLine();
@@ -94,13 +95,16 @@ public class ChatApp {
                     System.out.println("Enter your content: ");
                     String content = scanner.nextLine();
                     sendMessage(sender, receiver, content);
+                    break;
                 case "3":
                     System.out.println("What is your username? ");
                     String usernameForViewing = scanner.nextLine();
                     viewMessages(usernameForViewing);
+                    break;
                 case "4":
                     exit = true;
                     System.out.println("Goodbye!");
+                    break;
                 default:
                     System.out.println("Invalid option, please try again.");
             }
